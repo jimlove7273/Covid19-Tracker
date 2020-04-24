@@ -1,0 +1,26 @@
+div.cards {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  justify-content: space-evenly;
+}
+
+div.card {
+  padding: 0.8em !important;
+  border: 1px solid #ccc;
+  width: 30%;
+}
+
+div.card .cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+div.card .count {
+  font-size: 30px;
+}
+
+div.card .lastupdate {
+  font-size: 12px;
+}

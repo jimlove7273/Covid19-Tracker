@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+// -- Import the Components
+import { Cards, Chart, CountryPicker } from './components/index'
+
+// -- Import Third-Party Components
+import 'spectre.css'
+
+// -- Import Local Assets
+import logo from './images/covid19.jpg'
+import styles from './App.module.css'
+import { CovidProvider } from './context/CovidContext'
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <CovidProvider>
+      <div className={styles.container}>
+        <center><img className={styles.covid19logo} src={logo} alt="Covid-19 Logo" /></center>
+        <Cards />
+        <CountryPicker />
+        <Chart />
+      </div>
+    </CovidProvider>
+  )
 }
 
-export default App;
+export default App
